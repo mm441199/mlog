@@ -1,0 +1,13 @@
+.footer {
+  padding-top: 64px;
+  padding-bottom: 32px;
+  text-align: end;
+  
+  &-copyright {
+    padding: 0 40px;
+
+    small {
+      font-size: 0.7rem;
+    }
+  }
+}

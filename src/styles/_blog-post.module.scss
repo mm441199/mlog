@@ -1,0 +1,235 @@
+.blog-post-page {
+  background-color: #f7f7f7;
+  margin: 0 auto;
+}
+
+.content {
+  max-width: 1200px;
+  padding: 48px 24px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  column-gap: 24px;
+}
+
+/* =========================================
+【左側】記事内容のスタイリング
+========================================= */
+.mainContents {
+  flex: 7;
+  position: relative;
+  padding: 30px 24px;
+  // padding: 30px 40px;
+  background-color: #fff;
+  border: 1px solid #dddddd;
+  min-width: 0;
+  line-height: 2.2;
+}
+.blog-post {
+  
+  &-category {
+    font-size: 0.75rem;
+    display: block;
+    text-align: center;
+  }
+  &-title {
+    line-height: 1.5;
+    font-size: 1.25rem;
+    margin-top: 48px;
+  }
+  &-metas {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-Thumbnail {
+    border: 1px solid #dddddd;
+    margin-top: 48px;
+  }
+  &-text {
+    margin-top: 48px;
+    max-width: 100%;
+
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+    h2 {
+      background-color: #5a5a62;
+      color: #fff;
+      position: relative;
+      padding: 8px 20px;
+      font-size: 1.3rem;
+      
+      &:not(:first-of-type) {
+        margin-top: 64px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 4px;
+        left: 0;
+        display: block;
+        height: 1px;
+        width: 100%;
+        background-color: #fff;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 4px;
+        left: 0;
+        display: block;
+        height: 1px;
+        width: 100%;
+        background-color: #fff;
+      }
+    }
+
+    h3 {
+      border-left: 5px solid #5a5a62;
+      // border-top: 1px solid #d2d2d6;
+      // border-right: 1px solid #d2d2d6;
+      border-bottom: 1px solid #e1e1e7;
+      padding: 0 0 0 0.58em;
+      font-size: 1.2rem;
+      margin-top: 64px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    p {
+      text-align: justify;
+      hyphens: auto;
+    }
+  }
+  &-tags {
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 0.08em 0.5em;
+    
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-right: 16px;
+    font-size: 0.8rem;
+    
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+.tag-icon {
+  width: 15px;
+  margin-right: 0.2em;
+  top: 6px;
+}
+.created-at {
+  font-size: 0.8rem;
+  text-align: right;
+}
+
+table {
+  padding: 16px 0;
+  thead {
+    background-color: #e3e3e3;
+  }
+  tbody {
+    tr {
+      td {
+        padding: 0 8px;
+      }
+    }
+    tr:nth-child(even) {
+      background-color: #e3e3e3;
+    }
+    tr:nth-child(odd) {
+      background-color: #f8f8f8;
+    }
+  }
+}
+
+/* =========================================
+【右側】サイドバーのスタイリング
+========================================= */
+.sidebar {
+  flex: 3;
+  position: sticky;
+  top: 20px;
+  height: 100%;
+  
+  &-section {
+    padding: 24px 32px;
+    background-color: #fff;
+    border: 1px solid #dddddd;
+    margin-top: 24px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  &-title {
+    font-size: 0.95rem;
+    font-weight: 100;
+    border-bottom: 1px solid #dddddd;
+  }
+}
+
+.author {
+  display: flex;
+  justify-content: flex-start;
+  column-gap: 16px;
+
+  &-image-circle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #dddddd;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  &-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  &-name {
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  &-title {
+    font-size: 0.8rem;
+  }
+}
+
+.latest-posts {
+  list-style: none;
+  margin-left: 0;
+
+  &-item {
+    display: flex;
+    column-gap: 16px;
+    margin-bottom: 16px;
+  }
+  &-image {
+    width: 60px;
+    border: 1px solid #dddddd;
+  }
+  &-title {
+    flex: 6;
+    margin-top: 0;
+    font-size: 0.75rem;
+    font-weight: 100;
+  }
+}

@@ -1,0 +1,49 @@
+.gatsby-highlight-code-line {
+  background-color: rgba(255,255,255,.15); /* テーマに合わせて変更 */
+  display: block;
+  margin-right: -1em;
+  margin-left: -1em;
+  padding-right: 1em;
+  padding-left: .5em;
+  border-left: .5em solid rgba(255,255,255,.7);  /* テーマに合わせて変更 */
+}
+
+.gatsby-highlight {
+  background-color: #2d2d2d;  /* テーマと同じ色を指定 */
+  border-radius: .3em;
+  margin: .5em 0;
+  padding: 1em;
+  overflow: auto;
+}
+
+.gatsby-highlight pre[class*="language-"] {
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  overflow: initial;
+  float: left;
+  min-width: 100%;
+}
+
+
+.gatsby-code-title {
+  display: block;
+  position: relative;
+  background: #2d2d2d;
+  width: 100%;
+  top: 10px;
+  border-top-left-radius: 0.3em;
+  border-top-right-radius: 0.3em;
+}
+
+.gatsby-code-title span {
+  display: inline;
+  position: relative;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  color: #eee;
+  background: #777;
+  border-top-left-radius: 0.3em;
+  border-bottom-right-radius: 0.3em;
+  padding: 3px;
+  top: -4px;
+}

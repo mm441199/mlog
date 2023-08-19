@@ -1,128 +1,96 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-
 import Layout from "../components/layout"
+import Card from "../components/card"
 import Seo from "../components/seo"
-import * as styles from "../components/index.module.css"
+import * as styles from "../styles/_base.module.scss"
 
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-  },
-  {
-    text: "Examples",
-    url: "https://github.com/gatsbyjs/gatsby/tree/master/examples",
-    description:
-      "A collection of websites ranging from very basic to complex/complete that illustrate how to accomplish specific tasks within your Gatsby sites.",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Learn how to add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-  },
-]
+const IndexPage = ({ 
+  data: { dailyBlog, techBlog} 
+}) => {
+  const dailyBlogPost = dailyBlog.edges;
+  const techBlogPost = techBlog.edges;
 
-const samplePageLinks = [
-  {
-    text: "Page 2",
-    url: "page-2",
-    badge: false,
-    description:
-      "A simple example of linking to another page within a Gatsby site",
-  },
-  { text: "TypeScript", url: "using-typescript" },
-  { text: "Server Side Rendering", url: "using-ssr" },
-  { text: "Deferred Static Generation", url: "using-dsg" },
-]
+  return (
+    <Layout>
+      <div className={styles.introduction}>
+        <div className={styles.heroThumbnail}>
+          <StaticImage
+            src="../images/landscape_setouchi.jpg"
+            alt="setouchi"
+            className={styles.heroImage}
+          />
+          <span className={styles.heroCaption}>Date - 2022.07.12 | Spot - Naoshima</span>
+        </div>
+      </div>
+      <main className={styles.mainContents}>
+        <section className={styles.sectionBlock}>
+          <h3 className={styles.sectionTitle}>tech blog</h3>
+          <ul className={styles.blogCardGrid}>
+            {techBlogPost.map(({ node }) => {
+              return (
+                <li key={node.slug}>
+                  <Card card={node} />
+                </li>
+              )
+            })}
+          </ul>
+          <div className={styles.sectionButton}>
+            <Link to="http://localhost:8000/blog-post-tech/"><button className={styles.readMoreButton}>TECH BLOGをもっとみる</button></Link>
+          </div>
+         </section>
+        <section className={styles.sectionBlock}>
+          <h3 className={styles.sectionTitle}>daily blog</h3>
+          <ul className={styles.blogCardGrid}>
+            {dailyBlogPost.map(({ node }) => {
+              return (
+                <li key={node.slug}>
+                  <Card card={node} />
+                </li>
+              )
+            })}
+          </ul>
+          <div className={styles.sectionButton}>
+            <Link to="http://localhost:8000/blog-post-daily/"><button className={styles.readMoreButton}>DAILY BLOGをもっとみる</button></Link>
+          </div>
+         </section>
+      </main>
+    </Layout>
+  )
+} 
 
-const moreLinks = [
-  { text: "Join us on Discord", url: "https://gatsby.dev/discord" },
-  {
-    text: "Documentation",
-    url: "https://gatsbyjs.com/docs/",
-  },
-  {
-    text: "Starters",
-    url: "https://gatsbyjs.com/starters/",
-  },
-  {
-    text: "Showcase",
-    url: "https://gatsbyjs.com/showcase/",
-  },
-  {
-    text: "Contributing",
-    url: "https://www.gatsbyjs.com/contributing/",
-  },
-  { text: "Issues", url: "https://github.com/gatsbyjs/gatsby/issues" },
-]
 
-const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
-
-const IndexPage = () => (
-  <Layout>
-    <div className={styles.textCenter}>
-      <StaticImage
-        src="../images/example.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-3)` }}
-      />
-      <h1>
-        Welcome to <b>Gatsby!</b>
-      </h1>
-      <p className={styles.intro}>
-        <b>Example pages:</b>{" "}
-        {samplePageLinks.map((link, i) => (
-          <React.Fragment key={link.url}>
-            <Link to={link.url}>{link.text}</Link>
-            {i !== samplePageLinks.length - 1 && <> · </>}
-          </React.Fragment>
-        ))}
-        <br />
-        Edit <code>src/pages/index.js</code> to update this page.
-      </p>
-    </div>
-    <ul className={styles.list}>
-      {links.map(link => (
-        <li key={link.url} className={styles.listItem}>
-          <a
-            className={styles.listItemLink}
-            href={`${link.url}${utmParameters}`}
-          >
-            {link.text} ↗
-          </a>
-          <p className={styles.listItemDescription}>{link.description}</p>
-        </li>
-      ))}
-    </ul>
-    {moreLinks.map((link, i) => (
-      <React.Fragment key={link.url}>
-        <a href={`${link.url}${utmParameters}`}>{link.text}</a>
-        {i !== moreLinks.length - 1 && <> · </>}
-      </React.Fragment>
-    ))}
-  </Layout>
-)
-
-/**
- * Head export to define metadata for the page
- *
- * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
- */
 export const Head = () => <Seo title="Home" />
 
 export default IndexPage
+
+export const query = graphql`
+query {
+  dailyBlog: allContentfulBlog(limit: 6, filter: {tags: {eq: "Daily blog"}}) {
+    edges {
+      node {
+        slug
+        title
+        heroImage {
+          gatsbyImage(width: 100)
+          gatsbyImageData
+        }
+        tags
+      }
+    }
+  }
+  techBlog: allContentfulBlog(limit: 6, filter: {tags: {eq: "Tech blog"}}) {
+    edges {
+      node {
+        slug
+        title
+        heroImage {
+          gatsbyImage(width: 100)
+          gatsbyImageData
+        }
+      }
+    }
+  }
+}
+`

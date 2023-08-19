@@ -37,9 +37,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   color: var(--color-text);
-  font-family: sans-serif;
-  font-family: var(--font-sans);
-  font-weight: normal;
+  /* font-family: sans-serif; */
+  /* font-family: var(--font-sans); */
+  font-family: 'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',YuGothic,'Yu Gothic',sans-serif;
+  /* font-weight: normal; */
+  font-weight: 100;
+  letter-spacing: 0.01em;
   margin: 0;
   word-wrap: break-word;
 }
@@ -47,7 +50,6 @@ a {
   background-color: transparent;
   color: var(--color-primary);
   text-decoration: none;
-  font-weight: 500;
   text-decoration: underline;
   text-decoration-thickness: 1.5px;
   text-underline-offset: 2px;
@@ -61,11 +63,6 @@ abbr[title] {
   border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
   cursor: help;
   text-decoration: none;
-}
-b,
-strong {
-  font-weight: inherit;
-  font-weight: bolder;
 }
 dfn {
   font-style: italic;
@@ -124,7 +121,7 @@ dd,
 p {
   margin: 0;
   padding: 0;
-  margin-bottom: var(--space-4);
+  /* margin-bottom: var(--space-4); */
 }
 ul,
 ol {
@@ -145,15 +142,7 @@ pre {
   word-wrap: normal;
   padding: var(--space-4);
 }
-b,
-strong,
-dt,
-th {
-  font-weight: bold;
-}
-li {
-  margin-bottom: calc(var(--space-4) / 2);
-}
+
 ol li,
 ul li {
   padding-left: 0;
@@ -175,9 +164,6 @@ p *:last-child {
 }
 li > p {
   margin-bottom: calc(var(--space-4) / 2);
-}
-p {
-  max-width: 680px;
 }
 code {
   font-size: 0.875rem;

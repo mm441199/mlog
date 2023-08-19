@@ -1,0 +1,37 @@
+.container {
+  padding: 64px 40px;
+}
+
+.page-title {
+  margin-top: 0;
+  font-weight: 100;
+  text-align: center;
+}
+
+
+/* ===========================================
+ブログ記事グリッドレイアウトのスタイリング
+=========================================== */
+.blog-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  list-style: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  // margin-top: 64px;
+  margin-left: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .section-block {
+    &:nth-child(2) {
+      margin-top: 80px;
+    }
+  }
+
+  .blog-card-grid {
+    grid-template-columns: 1fr;
+    row-gap: 48px;
+  }
+}

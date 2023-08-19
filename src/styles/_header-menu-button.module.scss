@@ -1,0 +1,47 @@
+.header-menu-button {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 100;
+  
+  &-item {
+    display: block;
+    height: 2px;
+    background-color: #333;
+    transition: all 0.7s;
+    width: 45px;
+  }
+
+  @media screen and (min-width: 767px) {
+    & {
+      display: none;
+    }
+  }
+
+  /* ==========================================
+  メニューボタン押下時のスタイル
+  ========================================== */
+  &[aria-expanded="true"] > &-item {
+    
+    &:nth-child(1) {
+      transition-delay: 70ms;
+      transform: translateY(12px) rotate(315deg);
+    }
+    &:nth-child(2) {
+      transition-delay: 0s;
+      transform:  translateX(-18px) scaleX(0);
+    }
+    &:nth-child(3) {
+      transition-delay: 140ms;
+      transform: translateY(-12px) rotate(-135deg);
+    }
+  }
+  &[aria-expanded="true"] > &-text {
+    color: #333;
+    // transform: translateX(-10px);
+  }
+}

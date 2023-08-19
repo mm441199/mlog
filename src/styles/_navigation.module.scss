@@ -1,0 +1,51 @@
+.header-menu-navigation {
+  display: none;
+  transition: all 0.7s;
+  opacity: 0;
+
+
+
+  &-list {
+    list-style: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 36px;
+  }
+  &-list-item {
+    font-family: "misaki", sans-serif;
+    font-size: 2rem;
+  }
+  &-list-item-link {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  &[aria-expanded="true"] {
+    display: block;
+    animation: active 0.7s linear;
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 10;
+  }
+}
+
+@keyframes active {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
