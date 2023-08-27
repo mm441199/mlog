@@ -21,12 +21,10 @@ body {
     max-width: 800px;
     margin: 0 auto;
     height: 280px;
-    // overflow: hidden;
-    // overflow-y: clip;
     position: relative;
   }
   &-image {
-    position: absolute;
+    position: absolute !important;
     top: 0;
     right: 0;
     bottom: 0;
