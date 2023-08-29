@@ -4,26 +4,32 @@
 }
 
 .content {
-  max-width: 1200px;
+  max-width: 1080px;
   padding: 48px 24px;
   margin-right: auto;
   margin-left: auto;
   display: flex;
   column-gap: 24px;
 }
+@media screen and (max-width: 960px) {
+  .content {
+    flex-direction: column;
+  }
+}
 
 /* =========================================
 【左側】記事内容のスタイリング
 ========================================= */
 .mainContents {
-  flex: 7;
+  flex: 8;
   position: relative;
-  padding: 30px 24px;
+  padding: 30px 32px;
   // padding: 30px 40px;
   background-color: #fff;
   border: 1px solid #dddddd;
   min-width: 0;
-  line-height: 2.2;
+  line-height: 2;
+  font-size: 0.95rem;
 }
 .blog-post {
   
@@ -34,7 +40,7 @@
   }
   &-title {
     line-height: 1.5;
-    font-size: 1.25rem;
+    font-size: 1.8rem;
     margin-top: 48px;
   }
   &-metas {
@@ -48,49 +54,42 @@
   &-text {
     margin-top: 48px;
     max-width: 100%;
-
-  overflow-wrap: break-word;
-  word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 
     h2 {
-      background-color: #5a5a62;
-      color: #fff;
+      color: #333;
       position: relative;
-      padding: 8px 20px;
-      font-size: 1.3rem;
+      padding-left: 8px;
+      font-size: 1.6rem;
       
       &:not(:first-of-type) {
         margin-top: 64px;
       }
-
       &::before {
         content: "";
         position: absolute;
-        top: 4px;
+        bottom: -5px;
         left: 0;
         display: block;
-        height: 1px;
-        width: 100%;
-        background-color: #fff;
+        height: 6px;
+        width: 20%;
+        background-color: #2ec693;
       }
-
       &::after {
         content: "";
         position: absolute;
-        bottom: 4px;
-        left: 0;
+        bottom: -5px;
+        right: 1px;
         display: block;
-        height: 1px;
-        width: 100%;
-        background-color: #fff;
+        height: 6px;
+        width: 80%;
+        background-color: #7e7e7e;
       }
     }
 
     h3 {
-      border-left: 5px solid #5a5a62;
-      // border-top: 1px solid #d2d2d6;
-      // border-right: 1px solid #d2d2d6;
-      border-bottom: 1px solid #e1e1e7;
+      border-left: 5px solid #2ec693;
       padding: 0 0 0 0.58em;
       font-size: 1.2rem;
       margin-top: 64px;
@@ -167,7 +166,7 @@ table {
   height: 100%;
   
   &-section {
-    padding: 24px 32px;
+    padding: 24px;
     background-color: #fff;
     border: 1px solid #dddddd;
     margin-top: 24px;
@@ -216,20 +215,7 @@ table {
 .latest-posts {
   list-style: none;
   margin-left: 0;
-
-  &-item {
-    display: flex;
-    column-gap: 16px;
-    margin-bottom: 16px;
-  }
-  &-image {
-    width: 60px;
-    border: 1px solid #dddddd;
-  }
-  &-title {
-    flex: 6;
-    margin-top: 0;
-    font-size: 0.75rem;
-    font-weight: 100;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }

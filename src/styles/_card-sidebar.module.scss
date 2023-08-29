@@ -1,0 +1,41 @@
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  flex-direction: column;
+  background-color: #fff;
+  overflow: hidden;
+  cursor: pointer;
+  &:hover {
+    .card-title {
+      background: linear-gradient(transparent 95%, #333 0%);
+    }
+  }
+  &-link {
+    text-decoration: none;
+    margin-bottom: 16px;
+  }
+  &-thumbnail {
+    border: 1px solid #707070;
+    overflow: hidden;
+    position: relative;
+  }
+  &-image {
+    position: relative;
+    transition: transform 0.3s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  &-body {
+    position: relative;
+    background-color: #fff;
+  }
+  &-title {
+    font-size: 0.8rem;
+    font-weight: 100;
+    color: #333;
+    display: inline;
+    background: none;
+  }
+}

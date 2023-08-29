@@ -7,14 +7,15 @@ import "prismjs/themes/prism-tomorrow.css"
 import "../styles/syntax-highlight.css"
 // import { FiClock} from "react-icons/fi"
 import Toc from '../components/table-of-content'
+import Card from '../components/card-sidebar'
 
 import * as styles from '../styles/_blog-post.module.scss'
 
-const BlogPost = ({ data: { contentfulBlog, allContentfulBlog, toc} }) => {
+const BlogPost = ({ data: { contentfulBlog, allContentfulBlog, toc, techBlog }}) => {
   const post = contentfulBlog;
   const nodeList = allContentfulBlog.edges;
   const tocList = toc.edges;
-  console.log(tocList);
+  const techBlogPost = techBlog.edges;
 
   return (
     <Layout>
@@ -77,17 +78,10 @@ const BlogPost = ({ data: { contentfulBlog, allContentfulBlog, toc} }) => {
             <section className={styles.sidebarSection}>
               <h4 className={styles.sidebarTitle}>よく読まれている記事</h4>
               <ul className={styles.latestPosts}>
-                {nodeList.map(({node }) => {
+                {techBlogPost.map(({ node }) => {
                   return (
-                    <li key={node.path} className={styles.latestPostsItem}>
-                      <div className={styles.latestPostsThumbnail}>
-                        <GatsbyImage
-                          image={node.heroImage.gatsbyImageData}
-                          alt={node.heroImage.title}
-                          className={styles.latestPostsImage}
-                        />
-                      </div>
-                      <h4 className={styles.latestPostsTitle}>{node.title}</h4>
+                    <li key={node.slug}>
+                      <Card card={node} />
                     </li>
                   )
                 })}
@@ -139,6 +133,18 @@ export const query = graphql`
             childMarkdownRemark {
               tableOfContents
             }
+          }
+        }
+      }
+    }
+    techBlog: allContentfulBlog(limit: 3, filter: {tags: {eq: "Tech blog"}}) {
+      edges {
+        node {
+          slug
+          title
+          heroImage {
+            gatsbyImage(width: 100)
+            gatsbyImageData
           }
         }
       }
