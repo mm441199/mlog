@@ -21,7 +21,7 @@ const IndexPage = ({
             alt="setouchi"
             className={styles.heroImage}
           />
-          <span className={styles.heroCaption}>Date - 2022.07.12 | Spot - Naoshima</span>
+          <span className={styles.heroCaption}>Date - 2023.02.17 | Spot - Naoshima</span>
         </div>
       </div>
       <main className={styles.mainContents}>
