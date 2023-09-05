@@ -38,6 +38,11 @@ body {
     right: 0;
   }
 }
+@media screen and (max-width: 480px) {
+  .hero-Thumbnail {
+    height: 200px;
+  }
+}
 
 .main-contents {
   max-width: 1080px;
@@ -102,11 +107,6 @@ body {
   }
 }
 
-@media screen and (max-width: 900px) {
-  .section-title {
-    font-size: 1.6rem;
-  }
-}
 @media screen and (max-width: 768px) {
   .section-title {
     font-size: 1.6rem;
@@ -133,9 +133,19 @@ body {
       margin-top: 80px;
     }
   }
-
   .blog-card-grid {
     grid-template-columns: 1fr;
     row-gap: 48px;
+  }
+  .read-more-button {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  .blog-card-grid {
+    row-gap: 24px;
+  }
+  .read-more-button {
+    font-size: 0.9rem;
   }
 }
