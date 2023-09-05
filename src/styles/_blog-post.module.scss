@@ -14,6 +14,7 @@
 @media screen and (max-width: 960px) {
   .content {
     flex-direction: column;
+    padding: 24px 0;
   }
 }
 
@@ -24,13 +25,13 @@
   flex: 8;
   position: relative;
   padding: 30px 32px;
-  // padding: 30px 40px;
   background-color: #fff;
   border: 1px solid #dddddd;
   min-width: 0;
   line-height: 2;
   font-size: 0.95rem;
 }
+
 .blog-post {
   
   &-category {
@@ -126,6 +127,19 @@
     }
   }
 }
+@media screen and (max-width: 768px) {
+  .blog-post-title {
+    margin-top: 32px;
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .blog-post-title {
+    margin-top: 24px;
+    font-size: 1.2rem;
+  }
+}
+
 .tag-icon {
   width: 15px;
   margin-right: 0.2em;
