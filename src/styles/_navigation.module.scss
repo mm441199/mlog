@@ -39,6 +39,14 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .header-menu-navigation {
+    &-list-item {
+      font-size: 1.6rem;
+    }
+  }
+}
+
 @keyframes active {
   from {
     opacity: 0;
