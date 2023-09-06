@@ -27,14 +27,9 @@ const BlogPost = ({ data: { contentfulBlog, allContentfulBlog, toc, techBlog }})
             <div>
               {post.tags &&
                 post.tags.map(tag => (
-                  <p key={tag} className={styles.blogPostTags}>
-                    <StaticImage 
-                      alt="タグアイコン"
-                      src="../images/tag-icon.svg"
-                      className={styles.tagIcon}
-                    />
+                  <a key={tag} className={styles.blogPostTag}>
                     {tag}
-                  </p>
+                  </a>
               ))}
             </div>
             <div className={styles.blogPostThumbnail}>
