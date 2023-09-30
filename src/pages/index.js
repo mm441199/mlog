@@ -80,7 +80,7 @@ query {
       }
     }
   }
-  techBlog: allContentfulBlog(limit: 6, filter: {tags: {eq: "Tech blog"}}) {
+  techBlog: allContentfulBlog(limit: 12, filter: {tags: {eq: "Tech blog"}}) {
     edges {
       node {
         slug
