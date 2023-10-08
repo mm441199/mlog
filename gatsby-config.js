@@ -13,9 +13,13 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: process.env.spaceId,
-        accessToken: process.env.accessToken,
+        spaceId: 'gpstcsg360tk',
+        accessToken: 'yTQKc6UXG99Ab9LYY4XZy40ao5RldQnqj53s2nJqkkA',
       },
+      // options: {
+      //   spaceId: process.env.spaceId,
+      //   accessToken: process.env.accessToken,
+      // },
     },
     `gatsby-plugin-image`,
     {
@@ -35,7 +39,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`,
+        icon: `src/images/mlog-logo.png`,
       },
     },
     `gatsby-plugin-sass`,
