@@ -7,16 +7,16 @@ const Navigation = ({open}) => {
     <nav aria-expanded={open} className={styles.headerMenuNavigation}>
       <ul className={styles.headerMenuNavigationList}>
         <li className={styles.headerMenuNavigationListItem}>
-          <Link to ="https://ec-mlog/blog-post-tech/" className={styles.headerMenuNavigationListItemLink}>TECH BLOG</Link>
+          <Link to ="https://ec-mlog.com/blog-post-tech/" className={styles.headerMenuNavigationListItemLink}>TECH BLOG</Link>
         </li>
         <li className={styles.headerMenuNavigationListItem}>
-          <Link to ="https://ec-mlog/blog-post-daily/" className={styles.headerMenuNavigationListItemLink}>DAILY BLOG</Link>
+          <Link to ="https://ec-mlog.com/blog-post-daily/" className={styles.headerMenuNavigationListItemLink}>DAILY BLOG</Link>
         </li>
         <li className={styles.headerMenuNavigationListItem}>
           <Link to ="/" className={styles.headerMenuNavigationListItemLink}>WORKS</Link>
         </li>
         <li className={styles.headerMenuNavigationListItem}>
-          <Link to ="https://ec-mlog/form/" className={styles.headerMenuNavigationListItemLink}>CONTACT</Link>
+          <Link to ="https://ec-mlog.com/form/" className={styles.headerMenuNavigationListItemLink}>CONTACT</Link>
         </li>
       </ul>
     </nav>

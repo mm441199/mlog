@@ -37,7 +37,7 @@ const IndexPage = ({
             })}
           </ul>
           <div className={styles.sectionButton}>
-            <Link to="http://localhost:8000/blog-post-tech/"><button className={styles.readMoreButton}>TECH BLOGをもっとみる</button></Link>
+            <Link to="https://ec-mlog.com/blog-post-tech/"><button className={styles.readMoreButton}>TECH BLOGをもっとみる</button></Link>
           </div>
          </section>
         <section className={styles.sectionBlock}>
@@ -52,7 +52,7 @@ const IndexPage = ({
             })}
           </ul>
           <div className={styles.sectionButton}>
-            <Link to="http://localhost:8000/blog-post-daily/"><button className={styles.readMoreButton}>DAILY BLOGをもっとみる</button></Link>
+            <Link to="https://ec-mlog.com/blog-post-daily/"><button className={styles.readMoreButton}>DAILY BLOGをもっとみる</button></Link>
           </div>
          </section>
       </main>
