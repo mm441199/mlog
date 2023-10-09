@@ -35,10 +35,10 @@ const Header = () => {
         </div>
         <nav className={styles.headerNav}> 
           <ul className={styles.headerUl}>
-            <Link to="http://localhost:8000/blog-post-tech/" className={styles.headerLink}><li className={styles.headerLi}>tech blog</li></Link>
-            <Link to="http://localhost:8000/blog-post-daily/" className={styles.headerLink}><li className={styles.headerLi}>daily blog</li></Link>
+            <Link to="https://ec-mlog/blog-post-tech/" className={styles.headerLink}><li className={styles.headerLi}>tech blog</li></Link>
+            <Link to="https://ec-mlog/blog-post-daily/" className={styles.headerLink}><li className={styles.headerLi}>daily blog</li></Link>
             <Link to="" className={styles.headerLink}><li className={styles.headerLi}>works</li></Link>
-            <Link to="http://localhost:8000/form/" className={styles.headerLink}><li className={styles.headerLi}>contact</li></Link>
+            <Link to="https://ec-mlog/form/" className={styles.headerLink}><li className={styles.headerLi}>contact</li></Link>
           </ul>
         </nav>
         <HeaderMenuButton
