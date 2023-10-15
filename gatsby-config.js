@@ -6,20 +6,16 @@ module.exports = {
   siteMetadata: {
     title: `MLOG`,
     description: `技術記事とときどき旅行記`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    author: `mnmt_00`,
+    siteUrl: `https://ec-mlog.com`,
   },
   plugins: [
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: 'gpstcsg360tk',
-        accessToken: 'yTQKc6UXG99Ab9LYY4XZy40ao5RldQnqj53s2nJqkkA',
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_DELIVERY_TOKEN,
       },
-      // options: {
-      //   spaceId: process.env.spaceId,
-      //   accessToken: process.env.accessToken,
-      // },
     },
     `gatsby-plugin-image`,
     {
