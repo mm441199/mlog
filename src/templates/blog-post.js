@@ -5,7 +5,8 @@ import Layout from '../components/layout'
 
 import "prismjs/themes/prism-tomorrow.css"
 import "../styles/syntax-highlight.css"
-// import { FiClock} from "react-icons/fi"
+import { ImClock } from "react-icons/im";
+import { ImSpinner11 } from "react-icons/im";
 import Toc from '../components/table-of-content'
 import Card from '../components/card-sidebar'
 
@@ -23,6 +24,10 @@ const BlogPost = ({ data: { contentfulBlog, allContentfulBlog, toc, techBlog }})
         <div className={styles.content}>
           <main className={styles.mainContents}>
             <span className={styles.blogPostCategory}>ー TECH BLOG ー</span>
+            <div className={styles.blogPostDate}>
+              <p><ImClock className={styles.blogPostGatsbyIcon} />{ post.publishDate }</p>
+              <p><ImSpinner11 className={styles.blogPostGatsbyIcon} />{ post.createdAt }</p>
+            </div>
             <h2 className={styles.blogPostTitle}>{post.title}</h2>
             <div>
               {post.tags &&
@@ -58,7 +63,7 @@ const BlogPost = ({ data: { contentfulBlog, allContentfulBlog, toc, techBlog }})
                   />
                 </div>
                 <div className={styles.authorBody}>
-                  <p className={styles.authorName}>smnk_00</p>
+                  <p className={styles.authorName}>mnmt_00</p>
                 </div>
               </div>
             </section>
@@ -109,6 +114,8 @@ export const query = graphql`
           html
         }
       }
+      createdAt(formatString: "yyyy-MM-DD")
+      publishDate(formatString: "yyyy-MM-DD")
     }
     allContentfulBlog(limit: 3) {
       edges {

@@ -12,20 +12,18 @@ const BlogPostTech = ({
 
   return(
     <Layout>
-      <div className={styles.container}>
-        <main>
-          <h2 className={styles.pageTitle}>TECH BLOG</h2>
-          <ul className={styles.blogCardGrid}>
-            {techBlogPost.map(({ node }) => {
-              return (
-                <li key={node.slug}>
-                  <Card card={node} />
-                </li>
-              )
-            })}
-          </ul>
-        </main>
-        </div>
+      <main className={styles.mainContents}>
+        <h2 className={styles.pageTitle}>TECH BLOG</h2>
+        <ul className={styles.blogCardGrid}>
+          {techBlogPost.map(({ node }) => {
+            return (
+              <li key={node.slug}>
+                <Card card={node} />
+              </li>
+            )
+          })}
+        </ul>
+      </main>
     </Layout>
   );
 };

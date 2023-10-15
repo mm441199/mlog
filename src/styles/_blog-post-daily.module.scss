@@ -1,14 +1,18 @@
 .container {
   padding: 64px 40px;
 }
-
 .page-title {
   margin-top: 0;
   font-weight: 100;
   text-align: center;
 }
-
-
+.main-contents {
+  max-width: 1080px;
+  padding: 0 40px;
+  margin-top: 80px;
+  margin-right: auto;
+  margin-left: auto;
+}
 /* ===========================================
 ブログ記事グリッドレイアウトのスタイリング
 =========================================== */
