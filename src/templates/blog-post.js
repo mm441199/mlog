@@ -29,14 +29,14 @@ const BlogPost = ({ data: { contentfulBlog, allContentfulBlog, toc, techBlog }})
               <p><ImSpinner11 className={styles.blogPostGatsbyIcon} />{ post.createdAt }</p>
             </div>
             <h2 className={styles.blogPostTitle}>{post.title}</h2>
-            <div>
+            {/* <div>
               {post.tags &&
                 post.tags.map(tag => (
                   <a key={tag} className={styles.blogPostTag}>
                     {tag}
                   </a>
               ))}
-            </div>
+            </div> */}
             <div className={styles.blogPostThumbnail}>
               <GatsbyImage
                 image={post.heroImage.gatsbyImageData}
