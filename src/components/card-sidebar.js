@@ -1,13 +1,15 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
+
 import * as styles from '../styles/_card-sidebar.module.scss'
 
+
 const PostCard = ({ card }) => {
-  const pageLink = `/post/${ card.slug }/`
+  const postLink = `/post/${ card.slug }/`
 
   return(
-    <Link to={pageLink} className={styles.cardLink}>
+    <Link to={ postLink } className={styles.cardLink}>
       <div className={styles.card}>
         <div className={styles.cardThumbnail}>
           <GatsbyImage

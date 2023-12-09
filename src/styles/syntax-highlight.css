@@ -31,7 +31,7 @@
   position: relative;
   background: #2d2d2d;
   width: 100%;
-  top: 10px;
+  top: 12px;
   border-top-left-radius: 0.3em;
   border-top-right-radius: 0.3em;
 }
@@ -45,5 +45,5 @@
   border-top-left-radius: 0.3em;
   border-bottom-right-radius: 0.3em;
   padding: 3px;
-  top: -4px;
+  top: -3px;
 }

@@ -1,0 +1,51 @@
+
+.table-of-contents {
+  position: relative;
+  margin-top: 36px;
+  margin-bottom: 36px;
+  border: 2px solid #7178db;
+}
+.table-of-contents::before {
+  content: "目次";
+  position: absolute;
+  top: -32px;
+  left: -2px;
+  color: #333;
+  font-size: 0.85rem;
+  color: #fff;
+  font-weight: 600;
+  display: inline-block;
+  padding: 2px 8px;
+  background-color: #7178db;
+}
+.table-of-contents ul {
+  list-style-type: "-";
+  padding: 20px 0 20px 32px;
+}
+.table-of-contents ul li::marker {
+  margin-right: 8px;
+}
+.table-of-contents p {
+  width: 100%;
+}
+.table-of-contents a {
+  display: inline-block;
+  width: 100%;
+  padding-left: 8px;
+  color: #333;
+  font-weight: 600;
+}
+.table-of-contents a:hover {
+  color: #7178db;
+  font-weight: 600;
+}
+
+.table-of-contents > ul > li > p {
+  margin-bottom: 0;
+}
+
+.table-of-contents > ul > li > ul {
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}

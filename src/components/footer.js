@@ -16,7 +16,7 @@ const Footer = () => {
   return(
     <footer className={styles.footer}>
       <div className={styles.footerCopyright}>
-        <small>©{data.site.siteMetadata.title} All rights reserved. </small>
+        <small>©copyright 2023 {data.site.siteMetadata.title}</small>
       </div>
     </footer>
   )

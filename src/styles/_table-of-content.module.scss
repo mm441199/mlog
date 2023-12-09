@@ -3,6 +3,13 @@
     text-decoration: none;
     color: #333;
     font-size: 0.8rem;
+    display: block;
+    
+     &:hover {
+      background-color: #7178DB;
+      border-radius: 2px;
+      color: #fff;
+     }
   }
 }
 

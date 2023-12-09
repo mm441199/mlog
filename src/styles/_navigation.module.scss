@@ -2,6 +2,7 @@
   display: none;
   transition: all 0.7s;
   opacity: 0;
+  z-index: 100;
 
   &-list {
     list-style: none;

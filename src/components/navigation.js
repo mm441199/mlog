@@ -7,16 +7,19 @@ const Navigation = ({open}) => {
     <nav aria-expanded={open} className={styles.headerMenuNavigation}>
       <ul className={styles.headerMenuNavigationList}>
         <li className={styles.headerMenuNavigationListItem}>
-          <Link to ="https://ec-mlog.com/blog-post-tech/" className={styles.headerMenuNavigationListItemLink}>TECH BLOG</Link>
+          <Link to ="" className={styles.headerMenuNavigationListItemLink}>HOME</Link>
         </li>
         <li className={styles.headerMenuNavigationListItem}>
-          <Link to ="https://ec-mlog.com/blog-post-daily/" className={styles.headerMenuNavigationListItemLink}>DAILY BLOG</Link>
+          <Link to ="/tags/shopify/" className={styles.headerMenuNavigationListItemLink}>shopify</Link>
         </li>
         <li className={styles.headerMenuNavigationListItem}>
-          <Link to ="/" className={styles.headerMenuNavigationListItemLink}>WORKS</Link>
+          <Link to ="/tags/liquid/" className={styles.headerMenuNavigationListItemLink}>liquid</Link>
         </li>
         <li className={styles.headerMenuNavigationListItem}>
-          <Link to ="https://ec-mlog.com/form/" className={styles.headerMenuNavigationListItemLink}>CONTACT</Link>
+          <Link to ="/tags/gatsby/" className={styles.headerMenuNavigationListItemLink}>gatsbyJS</Link>
+        </li>
+        <li className={styles.headerMenuNavigationListItem}>
+          <Link to ="/form/" className={styles.headerMenuNavigationListItemLink}>CONTACT</Link>
         </li>
       </ul>
     </nav>

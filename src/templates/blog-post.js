@@ -1,84 +1,52 @@
 import React from 'react'
-import { graphql } from 'gatsby'
-import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
+import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
+import Card from '../components/card-sidebar'
 
 import "prismjs/themes/prism-tomorrow.css"
 import "../styles/syntax-highlight.css"
-import { ImClock } from "react-icons/im";
-import { ImSpinner11 } from "react-icons/im";
-import Toc from '../components/table-of-content'
-import Card from '../components/card-sidebar'
-
 import * as styles from '../styles/_blog-post.module.scss'
+import '../styles/table-of-contents.css'
 
-const BlogPost = ({ data: { contentfulBlog, allContentfulBlog, toc, techBlog }}) => {
+import { BsFileEarmarkPost } from "react-icons/bs";
+import { BiSolidCategory } from "react-icons/bi";
+
+const BlogPost = ({ data: { contentfulBlog, forCard }}) => {
   const post = contentfulBlog;
-  const nodeList = allContentfulBlog.edges;
-  const tocList = toc.edges;
-  const techBlogPost = techBlog.edges;
+  const card = forCard.edges;
 
   return (
     <Layout>
       <div className={styles.blogPostPage}>
-        <div className={styles.content}>
-          <main className={styles.mainContents}>
-            <span className={styles.blogPostCategory}>ー TECH BLOG ー</span>
-            <div className={styles.blogPostDate}>
-              <p><ImClock className={styles.blogPostGatsbyIcon} />{ post.publishDate }</p>
-              <p><ImSpinner11 className={styles.blogPostGatsbyIcon} />{ post.createdAt }</p>
+        <div className={styles.container}>
+          <main className={styles.main}>
+            <div className={styles.blogPostMeta}>
+              <p className={styles.blogPostDate}>公開日：{ post.createdAt }</p>
+              <ul className={styles.blogPostTag}>
+                {post.tags.map(tag => {
+                  const tagLink = `/tags/${tag}/`
+                  return(
+                    <li>
+                      <Link to={tagLink} className={styles.blogPostTagLink}>{tag}</Link>
+                    </li>
+                  )
+                })}
+              </ul>
             </div>
             <h2 className={styles.blogPostTitle}>{post.title}</h2>
-            {/* <div>
-              {post.tags &&
-                post.tags.map(tag => (
-                  <a key={tag} className={styles.blogPostTag}>
-                    {tag}
-                  </a>
-              ))}
-            </div> */}
-            <div className={styles.blogPostThumbnail}>
-              <GatsbyImage
-                image={post.heroImage.gatsbyImageData}
-                alt={post.heroImage.title}
-              />
-            </div>
             <div
               className={styles.blogPostText}
               dangerouslySetInnerHTML={{ __html: contentfulBlog.childContentfulBlogContentTextNode.childMarkdownRemark.html }}
             />
           </main>
           <aside className={styles.sidebar}>
-            {/* <section className={styles.sidebarSection}>
-              <h4 className={styles.sidebarTitle}>検索</h4>
-            </section> */}
             <section className={styles.sidebarSection}>
-              <h4 className={styles.sidebarTitle}>Author</h4>
-              <div className={styles.author}>
-                <div className={styles.authorImageCircle}>
-                  <StaticImage 
-                    alt="ブログ筆者イメージ画像"
-                    src="../images/icon.jpg"
-                    className={styles.authorImage}
-                  />
-                </div>
-                <div className={styles.authorBody}>
-                  <p className={styles.authorName}>mnmt_00</p>
-                </div>
+              <div className={styles.sidebarTitle}>
+                <BsFileEarmarkPost />
+                <h4>よく読まれている記事</h4>
               </div>
-            </section>
-            <section className={styles.sidebarSection}>
-              <h4 className={styles.sidebarTitle}>目次</h4>
-              {tocList.map(({ node }) => {
-                return(
-                  <Toc data={node.childContentfulBlogContentTextNode.childMarkdownRemark.tableOfContents} />
-                )
-              })}
-            </section>
-            <section className={styles.sidebarSection}>
-              <h4 className={styles.sidebarTitle}>よく読まれている記事</h4>
-              <ul className={styles.latestPosts}>
-                {techBlogPost.map(({ node }) => {
+              <ul className={styles.blogCardGrid}>
+                {card.map(({ node }) => {
                   return (
                     <li key={node.slug}>
                       <Card card={node} />
@@ -87,9 +55,20 @@ const BlogPost = ({ data: { contentfulBlog, allContentfulBlog, toc, techBlog }})
                 })}
               </ul>
             </section>
-            {/* <section className={styles.sidebarSection}>
-              <h4 className={styles.sidebarTitle}>よく検索されているワード</h4>
-            </section> */}
+            <section className={styles.sidebarSection}>
+              <div className={styles.sidebarTitle}>
+                <BiSolidCategory />
+                <h4>カテゴリー</h4>
+              </div>
+              <ul className={styles.category}>
+                <li><Link to="/" className={styles.categoryItem}>all</Link></li>
+                <li><Link to="/tags/shopify/" className={styles.categoryItem}>shopify</Link></li>
+                <li><Link to="/tags/liquid/" className={styles.categoryItem}>liquid</Link></li>
+                <li><Link to="/tags/gatsby/" className={styles.categoryItem}>gatsby</Link></li>
+                <li><Link to="/tags/contentful/" className={styles.categoryItem}>contentful</Link></li>
+                <li><Link to="/" className={styles.categoryItem}>design</Link></li>
+              </ul>
+            </section>
           </aside>
         </div>
       </div>
@@ -117,29 +96,7 @@ export const query = graphql`
       createdAt(formatString: "yyyy-MM-DD")
       publishDate(formatString: "yyyy-MM-DD")
     }
-    allContentfulBlog(limit: 3) {
-      edges {
-        node {
-          title
-          heroImage {
-            gatsbyImage(width: 100)
-            gatsbyImageData
-          }
-        }
-      }
-    }
-    toc: allContentfulBlog(filter: {slug: {eq: $slug}}) {
-      edges {
-        node {
-          childContentfulBlogContentTextNode {
-            childMarkdownRemark {
-              tableOfContents
-            }
-          }
-        }
-      }
-    }
-    techBlog: allContentfulBlog(limit: 3, filter: {tags: {eq: "Tech blog"}}) {
+    forCard: allContentfulBlog(limit: 5) {
       edges {
         node {
           slug
