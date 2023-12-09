@@ -5,8 +5,8 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `MLOG`,
-    description: `技術記事とときどき旅行記`,
-    author: `mnmt_00`,
+    description: `shopifyの技術記事がメインのブログです。`,
+    author: `minamoto`,
     siteUrl: `https://ec-mlog.com`,
   },
   plugins: [
