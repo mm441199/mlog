@@ -1,6 +1,5 @@
 .blog-post-page {
   background-color: #f7f7f7;
-  // background-color: #fff;
   margin: 0 auto;
 }
 
@@ -37,7 +36,7 @@ blockquote {
 
 @media screen and (max-width: 480px) {
   .container {
-    padding: 64px 24px;
+    padding: 64px 0;
   }
 }
 
@@ -62,6 +61,9 @@ blockquote {
   }
 }
 @media screen and (max-width: 480px) {
+  .main {
+    padding: 32px 16px;
+  }
   .mainContents {
     padding: 32px 16px 64px 16px;
   }
@@ -73,6 +75,7 @@ blockquote {
     align-items: center;
     background-color: #f7f7f7;
     padding: 8px 16px;
+    margin-bottom: 24px;
   }
   &-date {
     font-size: 0.8rem;
@@ -87,7 +90,6 @@ blockquote {
     font-weight: 600;
     padding-left: 0;
     position: relative;
-    // z-index: 10;
     
     li {
       display: inline-block;
@@ -205,15 +207,10 @@ blockquote {
   .blog-post {
 
     &-meta {
-      flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
     }
     &-date {
-      font-size: 0.975rem;
-
-      &::after {
-        display: none;
-      }
+      font-size: 0.75rem;
     }
     &-gatsby-icon {
       font-size: 0.8rem;
@@ -311,6 +308,7 @@ table {
 @media screen and (max-width: 768px) {
   .sidebar {
     margin-top: 24px;
+    padding: 0 16px;
   }
 }
 
