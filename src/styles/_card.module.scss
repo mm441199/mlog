@@ -78,6 +78,8 @@
     display: flex;
     column-gap: 8px;
     list-style: none;
+    padding-left: 0;
+    
   }
   &-tag-item {
     background-color: #7178DB;
@@ -131,10 +133,10 @@
       row-gap: 8px;
     }
     &-info-icon {
-      font-size: 1.75rem;
+      font-size: 1.5rem;
     }
     &-info-text {
-      font-size: 0.65rem;
+      font-size: 0.6rem;
     }
     &-tag-item  {
       font-size: 0.675rem;

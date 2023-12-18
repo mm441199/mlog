@@ -16,6 +16,15 @@
   flex-direction: column;
   row-gap: 48px;
 }
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 64px 24px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 100%;
+    position: relative;
+  }
+}
 
 /* ===========================================
 トップページのセクション共通スタイリング
