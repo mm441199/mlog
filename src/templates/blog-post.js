@@ -9,8 +9,8 @@ import "../styles/syntax-highlight.css"
 import * as styles from '../styles/_blog-post.module.scss'
 import '../styles/table-of-contents.css'
 
-const BlogPost = ({ contentfulBlog }) => {
-  const post = contentfulBlog;
+const BlogPost = ({ data }) => {
+  const post = data.contentfulBlog;
 
   return (
     <Layout>
@@ -37,7 +37,7 @@ const BlogPost = ({ contentfulBlog }) => {
             />
             <div
               className={styles.blogPostText}
-              dangerouslySetInnerHTML={{ __html: contentfulBlog.childContentfulBlogContentTextNode.childMarkdownRemark.html }}
+              dangerouslySetInnerHTML={{ __html: post.childContentfulBlogContentTextNode.childMarkdownRemark.html }}
             />
           </main>
           <Sidebar />
@@ -55,7 +55,8 @@ export const query = graphql`
       title
       slug
       heroImage {
-        gatsbyImageData(width: 100)
+        gatsbyImage(width: 100)
+        gatsbyImageData
         title
       }
       tags
