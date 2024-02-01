@@ -1,94 +1,65 @@
+@use'../styles/variable';
+
 .card {
   display: flex;
   align-items: center;
   position: relative;
   background-color: #fff;
   cursor: pointer;
-  border: 1px solid #c1c1c1;
   border-radius: 6px;
-  min-height: 220px;
   height: 100%;
-  padding: 40px 64px;
-  column-gap: 32px;
   transition: 0.3s;
   text-decoration: none;
-
   &:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 10px rgba(0,0,0,.1);
-    
-    .card-image {
-      transform: scale(1.1);
-    }
   }
-  
   &-link {
     text-decoration: none;
   }
-  &-thumbnail {
-    flex: 3;
-    position: relative;
-    flex-shrink: 0;
-    
-  }
   &-image {
     width: 180px;
-    position: relative;
+    height: 180px;
+    object-fit: cover;
     transition: transform 0.3s;
+    max-width: 100%;
   }
   &-body {
-    flex: 7;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
     height: 100%;
+    padding: 16px 24px;
   }
   &-title {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 600;
-    color: #333;
+    color: variable.$textColor;
     padding-top: 6px;
     margin-block-start: 0;
     margin-block-end: 0;
     display: inline;
     background: none;
   }
-  
   &-meta {
     display: flex;
-    justify-content: space-between;align-items: center;
-  }
-  &-info {
-    display: flex;
+    justify-content: space-between;
     align-items: center;
-    column-gap: 10px;
-  }
-  &-info-icon {
-    font-size: 2.15rem;
-    color: #7178DB;
-  }
-  &-info-text {
-    display: flex;
-    flex-direction: column;
-    font-size: 0.8rem;
-    color: #333;
   }
   &-tag {
     display: flex;
     column-gap: 8px;
     list-style: none;
     padding-left: 0;
-    
   }
   &-tag-item {
-    background-color: #7178DB;
-    padding: 0.375em 0.8em;
-    border-radius: 20px;
-    font-size: 0.85rem;
+    background-color: variable.$gray;
+    padding: 0.175em 0.625em;
+    border-radius: 18px;
+    font-size: 0.8rem;
     font-weight: bold;
     transition: opacity 0.3s;
-
     &:hover {
       opacity: 0.7;
     }
@@ -100,8 +71,8 @@
     z-index: 999;
   }
   &-publish-date {
-    color: #7178DB;
     font-weight: 600;
+    color: variable.$textColor;
   }
 }
 

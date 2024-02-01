@@ -1,0 +1,141 @@
+@use'../styles/variable';
+
+.sidebar {
+  max-width: 340px;
+
+  &-section {
+    border-radius: 6px;
+    margin-top: 24px;
+    background-color: #fff;
+    padding: 32px 20px;
+
+    ul,
+    ol {
+      padding-left: 0;
+      list-style: none;
+     }
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  &-title {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    border-bottom: 1px solid #bcbaba;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    padding-bottom: 6px;
+
+    h4 {
+      font-weight: 100;
+      color: #333;
+      font-weight: 600;
+      position: relative;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+  &-tag-body {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  &-tag-item {
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 988px) {
+  .sidebar {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sidebar {
+    margin-top: 24px;
+    padding: 0 16px;
+  }
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  column-gap: 24px;
+
+  &-icon {
+    img {
+      width: 100px;
+      border-radius: 50%;
+    }
+  }
+  &-info {
+    display: flex;
+    row-gap: 8px;
+    flex-direction: column;
+  }
+  &-name {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  &-button {
+    background-color: variable.$gray;
+    color: #f8f8f8;
+    font-weight: bold;
+    font-size: 0.75rem;
+    padding: 0.56em 0.98em;
+    width: 100px;
+    border: none;
+  }
+  &-profile {
+    margin-top: 16px;
+    font-size: 0.875rem;
+  }
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+
+  &-item {
+    text-decoration: none;
+    color: #333;
+    display: inline-block;
+    font-size: 1rem;
+    position: relative;
+    padding-left: 20px;
+    transition: 0.2s all;
+    
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      background-color: #333;
+      width: 8px;
+      height: 1px;
+    }
+
+    &:hover {
+      background-color: variable.$gray;
+      // background-color: #696a71;
+      color: #fff;
+
+      &::before {
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+.blog-card-grid {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}

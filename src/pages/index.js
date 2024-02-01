@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Card from "../components/card"
+import Sidebar from "../components/sidebar"
 
 import Seo from "../components/seo"
 import * as styles from "../styles/_base.module.scss"
@@ -18,7 +19,7 @@ const IndexPage = ({
         <div className={styles.container}>
           <main className={styles.main}>
             <section className={styles.sectionBlock}>
-              <h3 className={styles.sectionTitle}>blog</h3>
+              <h3 className={styles.sectionTitle}>記事一覧</h3>
               <ul className={styles.blogCardGrid}>
                 {allBlogPost.map(({ node }) => {
                   return (
@@ -30,6 +31,7 @@ const IndexPage = ({
               </ul>
             </section>
           </main>
+          <Sidebar className={styles.sidebar} /> 
         </div>
       </div>
     </Layout>

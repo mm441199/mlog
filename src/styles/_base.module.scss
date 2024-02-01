@@ -1,28 +1,41 @@
+@use'../styles/variable';
+
 .body {
   margin: 0 auto;
+  background-color: variable.$gray;
   background-color: #f8f8f8;
-  font-family: 'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+  font-family: 'Helvetica Neue', 'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3', sans-serif;
+  font-weight: 400;
+  color: variable.$textColor;
 }
 .container {
-  max-width: 1000px;
-  padding: 100px 40px 64px 40px;
+  max-width: 1180px;
+  padding: 64px 40px;
   margin-right: auto;
   margin-left: auto;
+  display: flex;
+  column-gap: 3.5%;
   height: 100%;
   position: relative;
 }
 .main {
-  display: flex;
-  flex-direction: column;
-  row-gap: 48px;
+  width: calc(100% - 340px - 3.5%);
+  position: relative;
+  border-radius: 6px;
+  min-width: 0;
+  line-height: 2;
+  font-size: 0.95rem;
 }
-@media screen and (max-width: 480px) {
+.sidebar {
+  max-width: 340px;
+}
+@media screen and (max-width: 988px) {
   .container {
-    padding: 64px 24px;
-    margin-right: auto;
-    margin-left: auto;
-    height: 100%;
-    position: relative;
+    flex-direction: column;
+    row-gap: 48px;
+  }
+  .main {
+    width: 100%;
   }
 }
 
@@ -33,29 +46,16 @@
   position: relative;
 }
 .section-title {
-  text-align: center;
   text-transform: capitalize;
   font-weight: 900;
   letter-spacing: 0.07em;
   font-size: 1.6rem;
   position: relative;
   margin-top: 0;
-  margin-bottom: 48px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: -16px;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 4px;
-    width: 32px;
-    background-color: #7178db;
-  }
 }
 @media screen and (max-width: 768px) {
   .section-title {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -72,7 +72,6 @@
   margin-left: 0;
   padding-left: 0;
 }
-
 @media screen and (max-width: 768px) {
   .section-block {
     &:not(&:first-child) {

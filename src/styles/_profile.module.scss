@@ -1,0 +1,113 @@
+@use'../styles/variable';
+
+.container {
+  font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3', sans-serif;
+  font-weight: 400;
+}
+.main {
+  margin: 0 auto;
+}
+.section {
+  
+  &-block {
+    width: 100%;
+    background-color: #fff;
+    padding: 64px 0;
+  
+    &-gray {
+      background-color: variable.$background-gray;
+    }
+  }
+  &-title {
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.125em;
+    font-weight: 400;
+    font-size: 1.95rem;
+    margin-bottom: 64px;
+  }
+}
+.introduction {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+
+  &-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    flex: 1;
+  }
+  &-body {
+    flex: 1;
+  }
+  &-title {
+    font-size: 2.4rem;
+    font-style: italic;
+    
+  }
+}
+.service {
+  max-width: 1180px;
+  // max-width: 560px;
+  // flex-direction: column;
+  column-gap: 32px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  row-gap: 64px;
+
+  &-title {
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin-bottom: 32px;
+  }
+  &-image {
+    width: 65px;
+  }
+  &-text {
+    font-size: 0.875rem;
+  }
+}
+
+.skills {
+
+  &-group {
+    display: flex;
+    column-gap: 20px;
+  }
+  &-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+  }
+  &-icon {
+    width: 35px;
+  }
+  &-name {
+    display: block;
+    font-size: 0.675rem;
+  }
+}
+
+.blog {
+  display: flex;
+  align-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+
+  &-image {
+    flex: 1;
+    width: 150px;
+  }
+  &-body {
+    flex: 1;
+  }
+  &-title {
+    font-size: 3.2rem;
+    text-transform: uppercase;
+  }
+}

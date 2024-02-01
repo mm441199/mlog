@@ -3,8 +3,9 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Card from "../components/card"
+import Sidebar from "../components/sidebar"
 
-import * as styles from "../styles/_blog-category.module.scss"
+import * as styles from "../styles/_base.module.scss"
 
 const BlogTagPage = ({ 
   data: { allContentfulBlog }, pageContext
@@ -14,25 +15,26 @@ const BlogTagPage = ({
   
   return (
     <Layout>
-      <div className={styles.body}>
-        <div className={styles.container}>
-          <main className={styles.main}>
-            <section className={styles.sectionBlock}>
-              <h3 className={styles.sectionTitle}>{tag}</h3>
-              <ul className={styles.blogCardGrid}>
-                {edges.map(({ node }) => {
-                  return (
-                    <li key={node.slug}>
-                      <Card card={node} />
-                    </li>
-                  )
-                })}
-              </ul>
-            </section>
-          </main>
-        </div>
+    <div className={styles.body}>
+      <div className={styles.container}>
+        <main className={styles.main}>
+          <section className={styles.sectionBlock}>
+            <h3 className={styles.sectionTitle}>{tag}</h3>
+            <ul className={styles.blogCardGrid}>
+              {edges.map(({ node }) => {
+                return (
+                  <li key={node.slug}>
+                    <Card card={node} />
+                  </li>
+                )
+              })}
+            </ul>
+          </section>
+        </main>
+        <Sidebar className={styles.sidebar} /> 
       </div>
-    </Layout>
+    </div>
+  </Layout>
   )
 } 
 

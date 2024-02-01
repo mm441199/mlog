@@ -1,15 +1,19 @@
+@use'../styles/variable';
+
 .blog-post-page {
   background-color: #f7f7f7;
   margin: 0 auto;
+  font-weight: 400;
+  font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3', sans-serif;
 }
 
 .container {
   max-width: 1180px;
-  padding: 100px 40px 64px 40px;
+  padding: 64px 40px;
   margin-right: auto;
   margin-left: auto;
   display: flex;
-  column-gap: 40px;
+  column-gap: 3.5%;
   height: 100%;
   position: relative;
 }
@@ -44,12 +48,10 @@ blockquote {
 【左側】記事内容のスタイリング
 ========================================= */
 .main {
-  flex: 7;
-  // width: 78%;
+  width: calc(100% - 340px - 3.5%);
   position: relative;
   padding: 30px 32px;
   background-color: #fff;
-  // border: 1px solid #c1c1c1;
   border-radius: 6px;
   min-width: 0;
   line-height: 2;
@@ -73,31 +75,29 @@ blockquote {
   &-meta {
     display: flex;
     align-items: center;
-    background-color: #f7f7f7;
     padding: 8px 16px;
     margin-bottom: 24px;
   }
   &-date {
-    font-size: 0.8rem;
-    
-    &::after {
-      content: "|";
-      padding: 0 8px;
-    }
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: #555;
   }
   &-tag {
-    font-size: 0.8rem;
+    font-size: 0.875rem;
     font-weight: 600;
     padding-left: 0;
     position: relative;
     
     li {
       display: inline-block;
-      padding: 0 8px;
+      padding: 3px 12px;
       margin-right: 8px;
       border-radius: 15px;
-      background-color: #7178db;
-      
+      background-color: #f3f4f6;
+      a {
+        color: #6b7e85;
+      }
       &:last-child {
         margin-right: 0;
       }
@@ -106,20 +106,37 @@ blockquote {
       }
     }
   }
+  &-tag {
+    display: flex;
+    column-gap: 8px;
+    list-style: none;
+    padding-left: 0;
+  }
+  &-tag-item {
+    background-color: variable.$gray;
+    padding: 0.175em 0.625em;
+    border-radius: 18px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    transition: opacity 0.3s;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
   &-tag-link {
     color: #fff;
     text-decoration: none;
+    position: relative;
+    z-index: 999;
   }
   &-link {
     text-decoration: none;
-  }
-  &-gatsby-icon {
-    font-size: 0.8rem;
   }
   &-title {
     line-height: 1.5;
     font-size: 1.8rem;
     margin-top: 16px;
+    margin-bottom: 0;
   }
   &-metas {
     display: flex;
@@ -248,107 +265,4 @@ table {
       background-color: #f8f8f8;
     }
   }
-}
-
-/* =========================================
-【右側】サイドバーのスタイリング
-========================================= */
-.sidebar {
-  flex: 3;
-  // position: sticky;
-  // top: 64px;
-  height: 100%;
-
-  &-section {
-    border-radius: 6px;
-    margin-top: 40px;
-
-    ul,
-    ol {
-      padding-left: 0;
-      list-style: none;
-     }
-
-    &:first-child {
-      margin-top: 0;
-    }
-  }
-  &-title {
-    display: flex;
-    align-items: center;
-    column-gap: 8px;
-    border-bottom: 1px solid #bcbaba;
-    font-size: 1.25rem;
-    margin-bottom: 20px;
-    padding-bottom: 6px;
-
-    h4 {
-      font-weight: 100;
-      color: #333;
-      font-weight: 600;
-      position: relative;
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-  }
-  &-tag-body {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-  &-tag-item {
-    display: inline-block;
-    display: flex;
-    align-items: center;
-    column-gap: 6px;
-    font-size: 0.85rem;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .sidebar {
-    margin-top: 24px;
-    padding: 0 16px;
-  }
-}
-
-.category {
-  display: flex;
-  flex-direction: column;
-  row-gap: 12px;
-
-  &-item {
-    text-decoration: none;
-    color: #333;
-    display: inline-block;
-    font-size: 1.125rem;
-    position: relative;
-    padding-left: 20px;
-    transition: 0.2s all;
-    
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 0;
-      background-color: #333;
-      width: 8px;
-      height: 1px;
-    }
-
-    &:hover {
-      background-color: #7178db;
-      color: #fff;
-
-      &::before {
-        background-color: #fff;
-      }
-    }
-  }
-}
-
-.blog-card-grid {
-  display: flex;
-  flex-direction: column;
-  row-gap: 20px;
 }
