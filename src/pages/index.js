@@ -50,12 +50,11 @@ query {
         slug
         title
         heroImage {
-          gatsbyImage(width: 200)
+          gatsbyImage(width: 100)
           gatsbyImageData
         }
         publishDate(formatString: "YYYY/MM/DD")
         tags
-        timeRequired
       }
     }
   }

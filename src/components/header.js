@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, useStaticQuery, graphql } from 'gatsby'
+import { Link } from 'gatsby'
 
 import HeaderMenuButton from '../components/header-menu-button'
 import Navigation from '../components/navigation'
@@ -12,15 +12,15 @@ const Header = () => {
     setOpen((prevState) => !prevState);
   };
 
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //     site {
+  //       siteMetadata {
+  //         title
+  //       }
+  //     }
+  //   }
+  // `)
 
   return(
     <header className={styles.header}>

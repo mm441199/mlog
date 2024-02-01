@@ -1,7 +1,7 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { Link } from 'gatsby'
 import { StaticImage } from "gatsby-plugin-image"
-import { BsFileEarmarkPost } from "react-icons/bs";
+// import { BsFileEarmarkPost } from "react-icons/bs";
 import { BiSolidCategory } from "react-icons/bi";
 import { FaPenNib } from "react-icons/fa";
 

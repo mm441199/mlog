@@ -4,7 +4,8 @@ import * as styles from '../styles/_navigation.module.scss'
 
 const Navigation = ({open}) => {
   return (
-    <nav aria-expanded={open} className={styles.headerMenuNavigation}>
+    <nav className={styles.headerMenuNavigation}>
+    {/* <nav aria-expanded={open} className={styles.headerMenuNavigation}> */}
       <ul className={styles.headerMenuNavigationList}>
         <li className={styles.headerMenuNavigationListItem}>
           <Link to ="" className={styles.headerMenuNavigationListItemLink}>HOME</Link>

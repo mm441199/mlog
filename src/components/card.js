@@ -10,7 +10,7 @@ const Card = ({ card }) => {
   return(
     <Link to={ postLink } className={styles.cardLink}>
       <div className={styles.card}>
-        <div className={styles.cardThumbnail}>
+        <div>
           <GatsbyImage
             image={card.heroImage.gatsbyImageData}
             alt={card.heroImage.title}

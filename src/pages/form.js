@@ -13,7 +13,7 @@ return (
           target="hidden_iframe"
         >
           <h2 className={styles.pageTitle}>お問い合わせ</h2>
-          <div className={styles.formItem}>
+          <div>
               <label htmlFor="name">お名前</label>
               <input id="name" type="text" name="entry.821697552" required></input>
           </div>

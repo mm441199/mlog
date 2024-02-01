@@ -1,9 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
-import { StaticImage } from "gatsby-plugin-image"
 import Layout from '../components/layout'
-import Card from '../components/card-sidebar'
 import Sidebar from '../components/sidebar'
 
 import "prismjs/themes/prism-tomorrow.css"
@@ -11,9 +9,8 @@ import "../styles/syntax-highlight.css"
 import * as styles from '../styles/_blog-post.module.scss'
 import '../styles/table-of-contents.css'
 
-const BlogPost = ({ data: { contentfulBlog, forCard }}) => {
+const BlogPost = ({ data: { contentfulBlog }}) => {
   const post = contentfulBlog;
-  const card = forCard.edges;
 
   return (
     <Layout>
@@ -60,6 +57,7 @@ export const query = graphql`
       heroImage {
         gatsbyImage(width: 100)
         gatsbyImageData
+        title
       }
       tags
       childContentfulBlogContentTextNode {
@@ -69,18 +67,6 @@ export const query = graphql`
       }
       createdAt(formatString: "yyyy-MM-DD")
       publishDate(formatString: "yyyy-MM-DD")
-    }
-    forCard: allContentfulBlog(limit: 5) {
-      edges {
-        node {
-          slug
-          title
-          heroImage {
-            gatsbyImage(width: 100)
-            gatsbyImageData
-          }
-        }
-      }
     }
   }
 `

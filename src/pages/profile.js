@@ -35,7 +35,7 @@ const ProfilePage = () => {
         <section className={styles.sectionBlock}>
           <h2 className={styles.sectionTitle}>service</h2>
           <div className={styles.service}>
-            <div className={styles.serviceBlock}>
+            <div>
               <StaticImage
                 src="../images/service-shoppingcart-icon.svg"
                 alt="ショッピングカートのイメージ"
@@ -44,7 +44,7 @@ const ProfilePage = () => {
               <h3 className={styles.serviceTitle}>ECサイト構築</h3>
               <p className={styles.serviceText}>全世界100万社以上が利用しているECプラットホーム「Shopify」をもとにECサイトを構築いたします。現在、他社のプラットホーム（BASE・STORES等）からShopifyへの移行も可能です。</p>
             </div>
-            <div className={styles.serviceBlock}>
+            <div>
               <StaticImage
                 src="../images/service-line-icon.svg"
                 alt="ショッピングカートのイメージ"
@@ -53,7 +53,7 @@ const ProfilePage = () => {
               <h3 className={styles.serviceTitle}>LINE公式アカウント運用</h3>
               <p className={styles.serviceText}>顧客と1対1で対話ができるLINEは、非常に有効な販促ツールです。友だち登録限定クーポンの発行や効果的な販売促進広告のアドバイスをいたしますのでお任せください。</p>
             </div>
-            <div className={styles.serviceBlock}>
+            <div>
               <StaticImage
                 src="../images/service-map-icon.svg"
                 alt="ショッピングカートのイメージ"
@@ -66,7 +66,7 @@ const ProfilePage = () => {
         </section>
         <section className={`${styles.sectionBlock} ${styles.sectionBlockGray}`}>
             <h2 className={styles.sectionTitle}>skills</h2>
-          <div className={styles.skills}>
+          <div>
             <div className={styles.skillsGroup}>
               <h3>Language</h3>
               <div className={styles.skillsItem}>
@@ -136,7 +136,7 @@ const ProfilePage = () => {
             <div className={styles.blogBody}>
               <h3 className={styles.blogTitle}>mlog</h3>
               <span>Since 2022.3〜</span>
-              <div className={styles.blogText}>
+              <div>
                 <p>Liquidを用いたShopifyのテーマカスタマイズなど、学習の記録を残しているブログです。Reactの学習も兼ねてGatsbyJSでヘッドレスブログを作成しました。</p>
               </div>
             </div>
