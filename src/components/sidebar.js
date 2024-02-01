@@ -17,18 +17,16 @@ const Sidebar = () => {
           <FaPenNib />
           <h4>著者</h4>
         </div>
-        <div className={styles.author}>
-          <div className={styles.authorIcon}>
-            <StaticImage src='../images/icon.jpg'></StaticImage>
-          </div>
-          <div className={styles.authorInfo}>
-            <div className={styles.authorName}>
+        <div className={styles.avatar}>
+          <StaticImage src='../images/avatar.jpg' className={styles.avatarImage}></StaticImage>
+          <div className={styles.avatarInfo}>
+            <div className={styles.avatarName}>
               <p>Masaki Minamoto</p>
             </div>
-            <button className={styles.authorButton}>プロフィール</button>
+            <button className={styles.avatarButton}>プロフィール</button>
           </div>
         </div>
-        <div className={styles.authorProfile}>
+        <div className={styles.avatarProfile}>
           <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
         </div>
       </section>

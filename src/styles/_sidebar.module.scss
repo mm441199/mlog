@@ -63,16 +63,14 @@
   }
 }
 
-.author {
+.avatar {
   display: flex;
   align-items: center;
   column-gap: 24px;
 
-  &-icon {
-    img {
-      width: 100px;
-      border-radius: 50%;
-    }
+  &-image {
+    width: 100px;
+    border-radius: 50%;
   }
   &-info {
     display: flex;
