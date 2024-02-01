@@ -1,5 +1,5 @@
 const path = require('path');
-const { threadId } = require('worker_threads')
+// const { threadId } = require('worker_threads')
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions

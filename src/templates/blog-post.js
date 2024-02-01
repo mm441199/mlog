@@ -9,7 +9,7 @@ import "../styles/syntax-highlight.css"
 import * as styles from '../styles/_blog-post.module.scss'
 import '../styles/table-of-contents.css'
 
-const BlogPost = ({ data: { contentfulBlog }}) => {
+const BlogPost = ({ contentfulBlog }) => {
   const post = contentfulBlog;
 
   return (
@@ -55,8 +55,7 @@ export const query = graphql`
       title
       slug
       heroImage {
-        gatsbyImage(width: 100)
-        gatsbyImageData
+        gatsbyImageData(width: 100)
         title
       }
       tags
