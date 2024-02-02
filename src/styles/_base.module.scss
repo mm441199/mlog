@@ -32,10 +32,15 @@
 @media screen and (max-width: 988px) {
   .container {
     flex-direction: column;
-    row-gap: 48px;
+    row-gap: 60px;
   }
   .main {
     width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 40px 24px;
   }
 }
 

@@ -56,12 +56,6 @@
     max-width: 100%;
   }
 }
-@media screen and (max-width: 768px) {
-  .sidebar {
-    margin-top: 24px;
-    padding: 0 16px;
-  }
-}
 
 .avatar {
   display: flex;
@@ -115,18 +109,17 @@
       position: absolute;
       top: 50%;
       left: 0;
-      background-color: #333;
+      background-color: #555;
       width: 8px;
       height: 1px;
     }
 
     &:hover {
-      background-color: variable.$gray;
-      // background-color: #696a71;
-      color: #fff;
+      color: variable.$accentPurple;
+      font-weight: 400;
 
       &::before {
-        background-color: #fff;
+        background-color: variable.$accentPurple;
       }
     }
   }

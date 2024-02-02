@@ -17,12 +17,18 @@
   height: 100%;
   position: relative;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 988px) {
   .container {
     flex-direction: column;
     row-gap: 48px;
   }
 }
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 40px 24px;
+  }
+}
+
 blockquote {
   margin: 0;
   position: relative;
@@ -38,15 +44,6 @@ blockquote {
   }
 }
 
-@media screen and (max-width: 480px) {
-  .container {
-    padding: 64px 0;
-  }
-}
-
-/* =========================================
-【左側】記事内容のスタイリング
-========================================= */
 .main {
   width: calc(100% - 340px - 3.5%);
   position: relative;
@@ -57,19 +54,19 @@ blockquote {
   line-height: 2;
   font-size: 0.95rem;
 }
-@media screen and (max-width: 768px) {
-  .mainContents {
-    padding: 24px;
+
+@media screen and (max-width: 988px) {
+  .main {
+    width: 100%;
   }
 }
-@media screen and (max-width: 480px) {
+  @media screen and (max-width: 480px) {
   .main {
     padding: 32px 16px;
   }
-  .mainContents {
-    padding: 32px 16px 64px 16px;
-  }
 }
+
+
 .blog-post {
 
   &-meta {

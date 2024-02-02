@@ -1,8 +1,10 @@
-.header-menu-navigation {
+@use'../styles/variable';
+
+.navigation {
   display: none;
   transition: all 0.7s;
   opacity: 0;
-  z-index: 100;
+  z-index: 999;
 
   &-list {
     list-style: none;
@@ -13,15 +15,20 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    row-gap: 36px;
+    row-gap: 40px;
     padding-left: 0;
   }
   &-list-item {
-    font-family: "misaki", sans-serif;
-    font-size: 2rem;
+    font-size: 1.8rem;
+    
+    &:hover {
+      .navigation-link {
+        color: variable.$accentPurple;
+      }
+    }
   }
-  &-list-item-link {
-    color: #333;
+  &-link {
+    color: variable.$textColor;
     text-decoration: none;
   }
   
@@ -36,16 +43,8 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #fff;
+    background-color: variable.$background-gray;
     z-index: 10;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .header-menu-navigation {
-    &-list-item {
-      font-size: 1.6rem;
-    }
   }
 }
 

@@ -21,7 +21,6 @@
     width: 180px;
     height: 180px;
     object-fit: cover;
-    transition: transform 0.3s;
     max-width: 100%;
   }
   &-body {
@@ -76,12 +75,12 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
   .card {
     flex-direction: column;
-    row-gap: 40px;
-    padding-right: 40px;
-    padding-left: 40px;
+    row-gap: 8px;
+    padding-top: 32px;
+    padding-bottom: 32px;
 
     &-body {
       row-gap: 24px;
@@ -93,16 +92,7 @@
 }
 @media screen and (max-width: 480px) {
   .card {
-    padding: 36px 24px;
     
-    &-body {
-      row-gap: 8px;
-    }
-    &-meta {
-      flex-direction: column;
-      align-items: flex-start;
-      row-gap: 8px;
-    }
     &-info-icon {
       font-size: 1.5rem;
     }
@@ -114,6 +104,9 @@
     }
     &-title {
       font-size: 1rem;
+    }
+    &-publish-date {
+      font-size: 0.875rem;
     }
   }
 }
