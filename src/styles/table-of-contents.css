@@ -49,3 +49,9 @@
   padding-top: 0;
   padding-bottom: 0;
 }
+
+@media screen and (max-width: 600px) {
+  .table-of-contents a {
+    font-size: 0.8rem;
+  }
+}
