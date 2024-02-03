@@ -12,16 +12,6 @@ const Header = () => {
     setOpen((prevState) => !prevState);
   };
 
-  // const data = useStaticQuery(graphql`
-  //   query {
-  //     site {
-  //       siteMetadata {
-  //         title
-  //       }
-  //     }
-  //   }
-  // `)
-
   return(
     <header className={styles.header}>
       <div className={styles.headerInner}>
