@@ -8,7 +8,7 @@ return (
     <Layout location = {location} title = "Form Page">
       <div className={styles.container}>
         <form
-          onSubmit={ () => {navigate("/form_sent/")}} 
+          onSubmit={ () => {navigate("/form-sent/")}} 
           action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSecVNwQFPuENI0u2xCJq5eC091NfGcrv43FHXLEV1FOrYZ-sQ/formResponse"
           target="hidden_iframe"
         >
