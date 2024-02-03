@@ -4,6 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 // import { BsFileEarmarkPost } from "react-icons/bs";
 import { BiSolidCategory } from "react-icons/bi";
 import { FaPenNib } from "react-icons/fa";
+import { IoLogoGithub } from "react-icons/io";
 
 import * as styles from '../styles/_sidebar.module.scss' 
 
@@ -23,7 +24,7 @@ const Sidebar = () => {
             <div className={styles.avatarName}>
               <p>Masaki Minamoto</p>
             </div>
-            <button className={styles.avatarButton}>プロフィール</button>
+            <Link to="/"  className={styles.avatarSnsLink}><IoLogoGithub /></Link>
           </div>
         </div>
         <div className={styles.avatarProfile}>

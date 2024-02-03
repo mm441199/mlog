@@ -56,6 +56,20 @@
     max-width: 100%;
   }
 }
+@media screen and (max-width: 768px) {
+  .sidebar {
+    &-title {
+      font-size: 0.95rem;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .sidebar {
+    &-title {
+      font-size: 0.85rem;
+    }
+  }
+}
 
 .avatar {
   display: flex;
@@ -63,7 +77,7 @@
   column-gap: 24px;
 
   &-image {
-    width: 100px;
+    width: 85px;
     border-radius: 50%;
   }
   &-info {
@@ -75,18 +89,28 @@
     font-size: 1rem;
     font-weight: bold;
   }
-  &-button {
-    background-color: variable.$gray;
-    color: #f8f8f8;
-    font-weight: bold;
-    font-size: 0.75rem;
-    padding: 0.56em 0.98em;
-    width: 100px;
-    border: none;
+  &-sns-link {
+    font-size: 1.4em;
+    color: #555;
   }
   &-profile {
     margin-top: 16px;
     font-size: 0.875rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .avatar {
+    &-profile {
+      font-size: 0.85rem;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .avatar {
+    &-profile {
+      font-size: 0.75rem;
+    }
   }
 }
 
@@ -121,6 +145,21 @@
       &::before {
         background-color: variable.$accentPurple;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .category {
+    &-item {
+      font-size: 0.9rem;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .category {
+    &-item {
+      font-size: 0.85rem;
     }
   }
 }
