@@ -5,15 +5,16 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby's default starter
+  MLOG.
 </h1>
 
 Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 
 _Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
 
-## 🚀 Quick start
+## 🚀 サイトURL
 
+<a>https://ec-mlog.com</a>
 1.  **Create a Gatsby site.**
 
     Use the Gatsby CLI ([install instructions](https://www.gatsbyjs.com/docs/tutorial/getting-started/part-0/#gatsby-cli)) to create a new site, specifying the default starter.
@@ -40,7 +41,41 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 
     Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
 
-## 🚀 Quick start (Netlify)
+## サイト概要
+主にShopifyのテーマカスタマイズ（テンプレート言語:Liquid）に関する記事を発信しています。
+
+基本的に自身で所持しているShopifyのサイトでコードを実装し、実際にブログ記事で紹介している技術をサイト上で触れてもらえるようにしています。
+
+## こだわった点
+わたし自身エンジニア歴の浅い人間ですので、なるべく初学者の方にとってわかりやすい、読みやすいように工夫しています。
+
+1. 実装した機能は最初に画像（Gif）で紹介しており、ひと目でどのような機能かイメージできます。
+2. 途中のコードや操作の説明を省略せず、丁寧に解説しています。
+3. GatsbyJSで構築しているため、ページ遷移が素早く快適に読み進めていただけます。
+
+1. GatsbyのCreatePageでブログ記事とブログタグごとの記事一覧ページを生成しています。
+2. 
+
+## なぜこのブログを作成したか
+当初ブログを立ち上げようと思った際は、とりあえずWordpressで作成しようかと思っていましたが、新しい技術を学んでみたい、ヘッドレス
+
+## 使用技術
+フロント
+・GatsbyJS
+CMS
+・Contentful
+ホスティング
+・Netlify
+言語
+・React
+・JavaScript
+・Sass
+バージョン管理
+・Github
+デザイン
+・Adobe XD
+イメージ加工
+・Adobe Photoshop
 
 Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
 
