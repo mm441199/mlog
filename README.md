@@ -11,11 +11,12 @@ ECプラットフォーム「Shopify」と、そのテーマ開発に用いる�
 
 また、ブログは静的サイトジェネレーター「GatsbyJS」で制作しており、サクサクページ表示されます。
 
-## 🚀 ブログURL
+## 🚀ブログURL
 
 <a>https://ec-mlog.com</a>
 
-## 🖥️ 環境構築
+
+## 🖥️環境構築
 [構築方法]
 1. Homebrewを使用してNode.jsとnpmをインストール
 2. npmを使用してGatsby CLIをインストール
@@ -25,22 +26,36 @@ ECプラットフォーム「Shopify」と、そのテーマ開発に用いる�
 
 ブログコンテンツはヘッドレスCMSのContentfulで作成し、Netlifyでデプロイしています。
 
-## 🔧　使用技術
+
+## 🔧使用技術
 ・Node JS v18.17.0
+
 ・npm v9.6.7
+
 ・Gatsby v5.11.0
+
 ・GraphQL
+
 ・Contentful
+
 ・Netlify
+
 ・React
+
 ・JavaScript
+
 ・Sass
+
 ・Github
+
 ・SourceTree
+
 ・Adobe Photoshop
+
 ・Adobe XD
 
-## ❓ なぜこのブログを作成したか
+
+## ❓なぜこのブログを作成したか
 Shopifyのテーマ開発において、基本的にLiquidでコードを書いていますが、参考となる日本語の技術ブログはまだまだ少ない印象でした。
 自分の頭の中を整理する意味でも、丁寧に順序立ててコード解説を書いて、初学者の方でも理解できるような内容になるよう心がけています。
 
