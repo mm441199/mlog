@@ -90,6 +90,7 @@
     font-weight: bold;
   }
   &-sns-link {
+    display: inline-block;
     font-size: 1.4em;
     color: #555;
   }
@@ -161,6 +162,19 @@
     &-item {
       font-size: 0.85rem;
     }
+  }
+}
+
+.shopify {
+  &-shop-name {
+    margin-bottom: 8px;
+  }
+  &-text-link {
+    text-decoration: none;
+    color: #555;
+  }
+  &-text {
+    font-size: 0.9rem;
   }
 }
 
