@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://ec-mlog.com">
-    <img alt="MLOG." src="./src/images/mlog_top.png" width="100%" />
+    <img alt="MLOG." src="./src/images/mlog_top.jpg" width="100%" />
   </a>
 </p>
 <h1>
