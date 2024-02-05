@@ -19,7 +19,7 @@ const IndexPage = ({
         <div className={styles.container}>
           <main className={styles.main}>
             <section className={styles.sectionBlock}>
-              <h3 className={styles.sectionTitle}>記事一覧</h3>
+              <h2 className={styles.sectionTitle}>記事一覧</h2>
               <ul className={styles.blogCardGrid}>
                 {allBlogPost.map(({ node }) => {
                   return (
