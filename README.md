@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://ec-mlog.com">
-    <img alt="MLOG." src="./src/images/mlog-top.png" width="100%" />
+    <img alt="MLOG." src="./src/images/mlog_top.png" width="100%" />
   </a>
 </p>
 <h1>
@@ -28,7 +28,31 @@ ECプラットフォーム「Shopify」と、そのテーマ開発に用いる�
 
 
 ## 🔧 使用技術
-・Node JS v18.17.0  ・npm v9.6.7  ・Gatsby v5.11.0  ・GraphQL  ・Contentful  ・Netlify  ・React  ・JavaScript  ・Sass  ・Github  ・SourceTree  ・Adobe Photoshop  ・Adobe XD
+・Node JS v18.17.0
+
+・npm v9.6.7
+
+・Gatsby v5.11.0
+
+・GraphQL
+
+・Contentful
+
+・Netlify
+
+・React
+
+・JavaScript
+
+・Sass
+
+・Git
+
+・SourceTree
+
+・Adobe Photoshop
+
+・Adobe XD
 
 
 ## ❓ なぜこのブログを作成したか
