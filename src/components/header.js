@@ -29,7 +29,7 @@ const Header = () => {
         <nav className={styles.headerNav}>
           <ul className={styles.headerNavList}>
             <li><Link to="/" className={styles.headerNavLink}>記事一覧</Link></li>
-            <li><Link to="/profile/" className={styles.headerNavLink}>プロフィール</Link></li>
+            {/* <li><Link to="/profile/" className={styles.headerNavLink}>プロフィール</Link></li> */}
             <li ><Link to="/form/" className={styles.headerNavLink}>お問い合わせ</Link></li>
           </ul>
         </nav>

@@ -19,7 +19,7 @@ const Footer = () => {
         <nav className={styles.footerNav}>
           <ul className={styles.footerNavList}>
             <li><Link to="/" className={styles.footerNavLink}>記事一覧</Link></li>
-            <li><Link to="/profile/" className={styles.footerNavLink}>プロフィール</Link></li>
+            {/* <li><Link to="/profile/" className={styles.footerNavLink}>プロフィール</Link></li> */}
             <li ><Link to="/form/" className={styles.footerNavLink}>お問い合わせ</Link></li>
           </ul>
         </nav>
